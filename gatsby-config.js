@@ -93,6 +93,5 @@ module.exports = {
         icon: "static" + settings.meta.iconimage,
       },
     },
-    'gatsby-plugin-offline',
   ],
 }
