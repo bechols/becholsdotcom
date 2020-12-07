@@ -20,6 +20,8 @@ const settings = require("./src/util/site.json")
 module.exports = {
   siteMetadata: settings.meta,
   plugins: [
+    `gatsby-plugin-netlify-cache`,
+    `gatsby-plugin-remove-fingerprints`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
