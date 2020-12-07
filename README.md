@@ -1,14 +1,14 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/63521b78-612e-4a2f-a409-3fa8009e7f3b/deploy-status)](https://app.netlify.com/sites/frosty-perlman-9da1cb/deploys) &nbsp;<a href="https://twitter.com/intent/follow?screen_name=stackrole">
-  <img src="https://img.shields.io/twitter/follow/stackrole.svg?label=Follow%20@Stackrole" alt="Follow @stackrole" />
-</a>
+# Bechols.com
+
+Built with [Gatsby](https://www.gatsbyjs.org/), hosted on [Netlify](https://netlify.com/). 
+
+Pulls current + recently read books from Goodreads at build time. The GitHub Action in this rep kicks off a new Netlify build a couple times a day so the site's never too out of date.
 
 # Foundation
 
 A starter to launch your blazing fast personal website and a blog, Built with [Gatsby][gatsby] and [Netlify CMS][netlifyCMS].
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stackrole/gatsby-starter-foundation)
-
-Need help launching your website? My DM's are open on <a href="https://twitter.com/stackrole">twitter</a>
 
 [![Gatsby Starter Foundation Screenshot](static/assets/screenshot.png)](https://foundation.stackrole.com)
 

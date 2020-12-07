@@ -69,6 +69,9 @@ const Post = ({ data, pageContext }) => {
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        <div className="blog-post-content">
+          Source: <a href={frontmatter.sourcelink}>{frontmatter.source}</a>
+        </div>
       </article>
       {(previous || next) && (
         <Pagination {...props} />
@@ -92,6 +95,8 @@ export const pageQuery = graphql`
         slug
         title
         description
+        source
+        sourcelink
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1980, maxHeight: 768, quality: 80, srcSetBreakpoints: [350, 700, 1050, 1400]) {

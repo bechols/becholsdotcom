@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Foundation",
+    "title": "Ben Echols",
     "titleTemplate": "%s",
-    "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-    "siteUrl": "https://foundation.stackrole.com",
-    "image": "/assets/stackrole.png",
-    "iconimage": "/assets/stackrole.png",
-    "twitterUsername": "@stackrole"
+    "description": "A small personal site",
+    "siteUrl": "https://bechols.com",
+    "image": "/assets/williams-favicon-32x32.png",
+    "iconimage": "/assets/williams-favicon-32x32.png",
+    "twitterUsername": "@bechols"
   },
   "ga": "UA-XXXXXXXXX-X"
 }

@@ -16,8 +16,8 @@ const NotFound = () => (
           fontSize: "128px",
           color: "var(--primary-color)"
         }}/>
-        <h1>Oops we did not expect that to happen</h1>
-        <p>Have you wondered into the unknow. Let us help you, Please take a look at below options</p>
+        <p>No man steps in the same river twice, for it is not the same river, and he is not the same man.</p>
+        <p>But whatever happened before, there's definitely no web page here now.</p>
       </header>
       <Link to="/" className="button"><RiArrowLeftSLine className="icon -left"/>Back to Homepage</Link>
       <Link to="/contact" className="button -outline">Report this <RiBugLine className="icon -right"/></Link>

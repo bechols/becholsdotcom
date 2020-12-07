@@ -1,11 +1,25 @@
 ---
 template: index-page
 slug: /
-title: Wyatt Morriss
-tagline: Graphic Designer
-featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
-cta:
-  ctaText: Know more
+title: Ben Echols
+tagline: Trying to leave it better than I found it
+featuredImage: /assets/headshot.jpeg
+cta1:
+  ctaTag: I'm a product manager at Confluent.
+  ctaText: About me
   ctaLink: /about
+cta2:
+  ctaTag: I read a lot.
+  ctaText: Books
+  ctaLink: /books
+cta3:
+  ctaTag: The world is fascinating.
+  ctaText: Various
+  ctaLink: /various
 ---
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+I'm a product manager at Confluent.
+›Work
+I read a lot.
+›Books
+The world is fascinating.
+›Interesting things

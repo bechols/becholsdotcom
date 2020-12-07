@@ -8,8 +8,8 @@ import BlogListHome from "../components/blog-list-home"
 import SEO from "../components/seo"
 
 export const pageQuery = graphql`
-  query HomeQuery($id: String!){
-		markdownRemark(id: { eq: $id }) {
+  query HomeQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
@@ -17,7 +17,12 @@ export const pageQuery = graphql`
         tagline
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 480, maxHeight: 380, quality: 80, srcSetBreakpoints: [960, 1440]) {
+            fluid(
+              maxWidth: 480
+              maxHeight: 380
+              quality: 80
+              srcSetBreakpoints: [960, 1440]
+            ) {
               ...GatsbyImageSharpFluid
             }
             sizes {
@@ -25,9 +30,20 @@ export const pageQuery = graphql`
             }
           }
         }
-        cta {
+        cta1 {
           ctaText
           ctaLink
+          ctaTag
+        }
+        cta2 {
+          ctaText
+          ctaLink
+          ctaTag
+        }
+        cta3 {
+          ctaText
+          ctaLink
+          ctaTag
         }
       }
     }
@@ -36,31 +52,61 @@ export const pageQuery = graphql`
 
 const HomePage = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
-  const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
-	return (
-		<Layout>
-      <SEO/>
+  const { frontmatter } = markdownRemark
+  const Image = frontmatter.featuredImage
+    ? frontmatter.featuredImage.childImageSharp.fluid
+    : ""
+  return (
+    <Layout>
+      <SEO />
       <div className="home-banner grids col-1 sm-2">
         <div>
-          <h1 class="title">{frontmatter.title}</h1>
-          <p class="tagline">{frontmatter.tagline}</p>
-          <div className="description" dangerouslySetInnerHTML={{__html: html}}/>
-          <Link to={frontmatter.cta.ctaLink} className="button">{frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine/></span></Link>
+          <h1 className="title">{frontmatter.title}</h1>
+          <p className="tagline">{frontmatter.tagline}</p>
+
+          <div className="ctaContainer row">
+          <p className="col-8">{frontmatter.cta1.ctaTag}</p>
+            <Link to={frontmatter.cta1.ctaLink} >
+              {frontmatter.cta1.ctaText}
+              <span className="icon -right">
+                <RiArrowRightSLine />
+              </span>
+            </Link>
+          </div>
+          <div className="ctaContainer row">
+          <p className="col-8">{frontmatter.cta2.ctaTag}</p>
+            <Link to={frontmatter.cta2.ctaLink} >
+              {frontmatter.cta2.ctaText}
+              <span className="icon -right">
+                <RiArrowRightSLine />
+              </span>
+            </Link>
+          </div>
+          <div className="ctaContainer row">
+            <p className="col-8">{frontmatter.cta3.ctaTag}</p>
+            <Link to={frontmatter.cta3.ctaLink} >
+              {frontmatter.cta3.ctaText}
+              <span className="icon -right">
+                <RiArrowRightSLine />
+              </span>
+            </Link>
+          </div>
         </div>
         <div>
           {Image ? (
-            <Img 
-              fluid={Image} 
-              alt={frontmatter.title + ' - Featured image'}
+            <Img
+              fluid={Image}
+              alt={frontmatter.title + " - Featured image"}
               className="featured-image"
             />
-          ) : ""}
+          ) : (
+            ""
+          )}
         </div>
       </div>
-      <BlogListHome/>
-		</Layout>
-	)
+      <BlogListHome />
+    </Layout>
+  )
 }
 
 export default HomePage

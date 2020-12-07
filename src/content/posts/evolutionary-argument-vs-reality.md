@@ -1,0 +1,15 @@
+---
+template: blog-post
+slug: /evolutionary-argument-vs-reality
+title: The Evolutionary Argument Against Reality
+date: 2020-12-04T00:00:00.000Z
+description: "Interesting"
+source: Donald Hoffman
+sourcelink: https://www.quantamagazine.org/the-evolutionary-argument-against-reality-20160421
+---
+
+Suppose in reality there’s a resource, like water, and you can quantify how much of it there is in an objective order — very little water, medium amount of water, a lot of water. Now suppose your fitness function is linear, so a little water gives you a little fitness, medium water gives you medium fitness, and lots of water gives you lots of fitness — in that case, the organism that sees the truth about the water in the world can win, but only because the fitness function happens to align with the true structure in reality. Generically, in the real world, that will never be the case. Something much more natural is a bell curve — say, too little water you die of thirst, but too much water you drown, and only somewhere in between is good for survival. Now the fitness function doesn’t match the structure in the real world. And that’s enough to send truth to extinction. For example, an organism tuned to fitness might see small and large quantities of some resource as, say, red, to indicate low fitness, whereas they might see intermediate quantities as green, to indicate high fitness. Its perceptions will be tuned to fitness, but not to truth. It won’t see any distinction between small and large — it only sees red — even though such a distinction exists in reality.
+
+But how can seeing a false reality be beneficial to an organism’s survival?
+
+There’s a metaphor that’s only been available to us in the past 30 or 40 years, and that’s the desktop interface. Suppose there’s a blue rectangular icon on the lower right corner of your computer’s desktop — does that mean that the file itself is blue and rectangular and lives in the lower right corner of your computer? Of course not. But those are the only things that can be asserted about anything on the desktop — it has color, position and shape. Those are the only categories available to you, and yet none of them are true about the file itself or anything in the computer. They couldn’t possibly be true. That’s an interesting thing. You could not form a true description of the innards of the computer if your entire view of reality was confined to the desktop. And yet the desktop is useful. That blue rectangular icon guides my behavior, and it hides a complex reality that I don’t need to know. That’s the key idea. Evolution has shaped us with perceptions that allow us to survive. They guide adaptive behaviors. But part of that involves hiding from us the stuff we don’t need to know. And that’s pretty much all of reality, whatever reality might be. If you had to spend all that time figuring it out, the tiger would eat you.

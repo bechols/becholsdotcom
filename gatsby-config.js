@@ -3,6 +3,11 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
