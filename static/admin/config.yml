@@ -32,11 +32,11 @@ collections:
           label: 'Publish Date',
           name: 'date',
           widget: 'datetime',
-          dateFormat: 'YYYY-MM-DD',
-          timeFormat: 'HH:mm',
+          date_format: 'YYYY-MM-DD',
+          time_format: 'HH:mm',
           format: 'YYYY-MM-DD HH:mm',
         }
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - { label: 'SEO Description', name: 'description', widget: 'text', required: false }
       - { label: 'source', name: 'source', widget: 'string', hint: 'Display name for source person or site' }
       - { label: 'sourcelink', name: 'sourcelink', widget: 'string', hint: 'URL for source site' }
       - {
