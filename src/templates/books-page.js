@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ShowBooks from "../components/ShowBooks"
 
 export const pageQuery = graphql`
   query BooksQuery($id: String!) {
@@ -55,59 +56,24 @@ export const pageQuery = graphql`
 `
 
 const BooksPage = ({ data }) => {
-  const currentBooks = data.goodreadsCurrent.reviews
-  const recentBooks = data.goodreadsRecent.reviews
-  const staticBooks = data.markdownRemark.html
   return (
     <Layout className="page">
       <SEO />
       <div className="wrapper">
-        <h2>Currently reading</h2>
-        {currentBooks.map(({ book }) => {
-          if (book.title) {
-            return (
-              <div
-                className="Book"
-                key={book.title + book.author}
-                style={{ paddingBottom: "5px", textDecoration: "none" }}
-              >
-                <a
-                  key={book.title + book.link}
-                  href={book.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {book.title}
-                </a>
-                {" by "}
-                {book.author}
-              </div>
-            )
-          }
-          return null
-        })}
-        <h2>Recently read</h2>
-        {recentBooks.map(({ book }) => {
-          return (
-            <div
-              className="Book"
-              key={book.title + book.author}
-              style={{ paddingBottom: "5px", textDecoration: "none" }}
-            >
-              <a
-                key={book.title + book.link}
-                href={book.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {book.title}
-              </a>
-              {" by "}
-              {book.author}
-            </div>
-          )
-        })}
-        <div className="description" dangerouslySetInnerHTML={{ __html: staticBooks }} />
+        <ShowBooks
+          header="Currently reading"
+          books={data.goodreadsCurrent.reviews}
+        />
+
+        <ShowBooks
+          header="Recently read"
+          books={data.goodreadsRecent.reviews}
+        />
+
+        <div
+          className="description"
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
       </div>
     </Layout>
   )
