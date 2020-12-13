@@ -38,6 +38,7 @@ export const pageQuery = graphql`
         book {
           author
           title
+          link
         }
       }
     }
@@ -46,6 +47,7 @@ export const pageQuery = graphql`
         book {
           author
           title
+          link
         }
       }
     }
