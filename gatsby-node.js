@@ -56,9 +56,6 @@ exports.sourceNodes = async ({ actions, reporter }) => {
       `gatsby-source-goodreads: Failed API call -  ${recentShelfListXml}`
     )
   } else {
-    var shelfReviewId =
-      `reviewList-` + goodReadsUserId + recentlyReadShelfString
-
     parseString(recentShelfListXml.data, function (err, result) {
       if (err) {
         reporter.panic(
@@ -116,14 +113,16 @@ exports.sourceNodes = async ({ actions, reporter }) => {
           shelfName: recentlyReadShelfString,
           reviews: reviewListings,
 
-          id: shelfReviewId,
+          id: recentlyReadShelfString,
           parent: null,
           children: [],
           internal: {
             type: `GoodreadsRecent`,
             contentDigest: crypto
               .createHash(`md5`)
-              .update("shelf" + goodReadsUserId + recentlyReadShelfString)
+              .update(
+                "shelf" + goodReadsUserId + JSON.stringify(reviewListings)
+              )
               .digest(`hex`),
           },
         })
@@ -136,9 +135,6 @@ exports.sourceNodes = async ({ actions, reporter }) => {
       `gatsby-source-goodreads: Failed API call -  ${currentShelfListXml}`
     )
   } else {
-    var shelfReviewId =
-      `reviewList-` + goodReadsUserId + currentlyReadingShelfString
-
     parseString(currentShelfListXml.data, function (err, result) {
       if (err) {
         reporter.panic(
@@ -194,14 +190,14 @@ exports.sourceNodes = async ({ actions, reporter }) => {
           shelfName: currentlyReadingShelfString,
           reviews: reviewListings,
 
-          id: shelfReviewId,
+          id: currentlyReadingShelfString,
           parent: null,
           children: [],
           internal: {
             type: `GoodreadsCurrent`,
             contentDigest: crypto
               .createHash(`md5`)
-              .update("shelf" + goodReadsUserId + currentlyReadingShelfString)
+              .update("currentlyReading" + JSON.stringify(reviewListings))
               .digest(`hex`),
           },
         })
