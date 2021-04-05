@@ -8,7 +8,7 @@ linkedInUrl: https://linkedin.com/in/benechols
 
 ## Current
 
-Senior Product Manager, Confluent Cloud <a href="https://www.confluent.io" target="_blank" rel="noopener noreferrer">@Confluent</a>
+Group Product Manager, Confluent Cloud <a href="https://www.confluent.io" target="_blank" rel="noopener noreferrer">@Confluent</a>
 
 ## Previous
 
